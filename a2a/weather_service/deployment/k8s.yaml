@@ -99,6 +99,14 @@ spec:
         #     secretKeyRef:
         #       name: llm-credentials
         #       key: openai-api-key
+        - name: RITS_API_KEY
+          value: dummy
+        # For production, use a Secret:
+        # - name: RITS_API_KEY
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: llm-credentials
+        #       key: RITS_API_KEY
         - name: LLM_MODEL
           value: llama3.2:3b-instruct-fp16
         # Kagenti will supply a GITHUB_SECRET_NAME, but the weather service does not need it.

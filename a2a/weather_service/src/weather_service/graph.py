@@ -37,6 +37,9 @@ async def get_graph(client) -> StateGraph:
         model=config.llm_model,
         openai_api_key=config.llm_api_key,
         openai_api_base=config.llm_api_base,
+        default_headers={
+            "RITS_API_KEY": os.getenv("RITS_API_KEY", ""),
+        },
         temperature=0,
     )
 
