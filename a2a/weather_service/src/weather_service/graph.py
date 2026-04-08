@@ -40,6 +40,7 @@ async def get_graph(client) -> StateGraph:
         default_headers={
             "RITS_API_KEY": os.getenv("RITS_API_KEY", ""),
         },
+        timeout=60,
         temperature=0,
     )
 
